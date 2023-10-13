@@ -14,8 +14,6 @@ class _FirstScreenState extends State<FirstScreen> {
     return Scaffold(
         body: Stack(
       children: [
-
-
         // gif
         SizedBox(
           width: MediaQuery.of(context).size.width,
@@ -27,20 +25,45 @@ class _FirstScreenState extends State<FirstScreen> {
           ),
         ),
 
-
-        // Text  
-         Center(
-          child: RichText(
-            text: const TextSpan(
-              text: 'We will deliver your favorite food in 30 minutes',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w300,),
+        // Container box
+         Align(
+              alignment: Alignment.bottomCenter,
+              child:Container(
+                padding: EdgeInsets.symmetric(horizontal:32),
+              height: 400,
+              width: 1000 ,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 11, 11, 11).withOpacity(.9),
+                borderRadius: BorderRadius.circular(16),
+              
+              ),
+              child:Center(
+                child: RichText(
+                  
+                  text: const TextSpan(
+                    text: 'E-commerce',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                    ),
+                 
+                   children:<TextSpan>[TextSpan(
+                    text: 'We will deliver your favorite food in 30 minutes',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 92, 92, 92),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  ],
+                ),
+              ),  
+             
+         
             ),
-          ),
-        ),
-        
+         ),
+         ),
       ],
     ));
   }

@@ -49,7 +49,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     ),
                  
                    children:<TextSpan>[TextSpan(
-                    text: 'We will deliver your favorite food in 30 minutes',
+                    text: '\nWe will deliver your favorite food in 30 minutes',
                     style: TextStyle(
                       color: Color.fromARGB(255, 92, 92, 92),
                       fontSize: 24,

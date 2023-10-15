@@ -34,7 +34,10 @@ class _FirstScreenState extends State<FirstScreen> {
               width: 1000,
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 11, 11, 11).withOpacity(.9),
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(16),topRight: Radius.circular(16)),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(16),
+                  topRight: Radius.circular(16),
+                ),
               ),
 
               // Text and ElevatedButton
@@ -52,11 +55,10 @@ class _FirstScreenState extends State<FirstScreen> {
                           ),
                         ),
                         WidgetSpan(
-                          child: SizedBox(height:16,),
+                          child: SizedBox(height: 16),
                         ),
                         TextSpan(
-                          text:
-                              '\nWe will deliver your favorite food in 30 minutes',
+                          text: '\nWe will deliver your favorite food in 30 minutes',
                           style: TextStyle(
                             color: Color.fromARGB(255, 92, 92, 92),
                             fontSize: 20,
@@ -69,24 +71,29 @@ class _FirstScreenState extends State<FirstScreen> {
                   const SizedBox(
                     height: 16,
                   ),
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: const Color.fromARGB(255, 6, 6, 6),
-                        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-                        elevation: 8.0,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
+                  Container(
+                    width: double.infinity,
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          foregroundColor: const Color.fromARGB(255, 6, 6, 6),
+                          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                          elevation: 8.0,
+                          textStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          minimumSize: Size(double.infinity, 50), // Set the height here
                         ),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text('Next'),
-                          Icon(Icons.navigate_next), // Add the next icon here
-                        ],
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max, // Maximize width
+                          children: [
+                            Text('Next'),
+                            Icon(Icons.navigate_next), // Add the next icon here
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -99,3 +106,4 @@ class _FirstScreenState extends State<FirstScreen> {
     );
   }
 }
+

@@ -30,11 +30,11 @@ class _FirstScreenState extends State<FirstScreen> {
             alignment: Alignment.bottomCenter,
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 32, vertical: 32),
-              height: 300,
+              height: 230,
               width: 1000,
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 11, 11, 11).withOpacity(.9),
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(16),topRight: Radius.circular(16)),
               ),
 
               // Text and ElevatedButton
@@ -52,38 +52,42 @@ class _FirstScreenState extends State<FirstScreen> {
                           ),
                         ),
                         WidgetSpan(
-                          child: SizedBox(width: 200),
+                          child: SizedBox(height:16,),
                         ),
                         TextSpan(
                           text:
                               '\nWe will deliver your favorite food in 30 minutes',
                           style: TextStyle(
                             color: Color.fromARGB(255, 92, 92, 92),
-                            fontSize: 22,
+                            fontSize: 20,
                             fontWeight: FontWeight.w300,
                           ),
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 10,
+                  const SizedBox(
+                    height: 16,
                   ),
                   Align(
                     alignment: Alignment.topLeft,
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        foregroundColor: Color.fromARGB(255, 0, 0, 0),
-                        backgroundColor: Color.fromARGB(255, 245, 245, 245),
-                        elevation: 12.0,
+                        foregroundColor: const Color.fromARGB(255, 6, 6, 6),
+                        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                        elevation: 8.0,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        textStyle: const TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255)),
                       ),
-                      child: const Text('Next'),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text('Next'),
+                          Icon(Icons.navigate_next), // Add the next icon here
+                        ],
+                      ),
                     ),
                   ),
                 ],

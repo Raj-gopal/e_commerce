@@ -92,8 +92,7 @@ class _FirstScreenState extends State<FirstScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                            // Maximize width
                           children: [
-                            Text('Next',),
-                           // Icon(Icons.navigate_next), // Add the next icon here
+                            Text('Next'),
                           ],
                         ),
                       ),

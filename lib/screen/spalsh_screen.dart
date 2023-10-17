@@ -30,7 +30,7 @@ class _FirstScreenState extends State<FirstScreen> {
             alignment: Alignment.bottomCenter,
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 32, vertical: 32),
-              height: 230,
+              height: 250,
               width: 1000,
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 11, 11, 11).withOpacity(.9),
@@ -78,20 +78,22 @@ class _FirstScreenState extends State<FirstScreen> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          foregroundColor: const Color.fromARGB(255, 6, 6, 6),
-                          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+                          foregroundColor: Color.fromARGB(255, 250, 250, 250),
+                          backgroundColor: Color.fromARGB(255, 247, 70, 70),
                           elevation: 8.0,
                           textStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.circular(24),
                           ),
                           minimumSize: Size(double.infinity, 50), // Set the height here
                         ),
                         child: Row(
-                          mainAxisSize: MainAxisSize.max, // Maximize width
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                           // Maximize width
                           children: [
-                            Text('Next'),
-                            Icon(Icons.navigate_next), // Add the next icon here
+                            Text('Next',),
+                           // Icon(Icons.navigate_next), // Add the next icon here
                           ],
                         ),
                       ),

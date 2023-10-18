@@ -1,3 +1,4 @@
+import 'package:e_commerce/screen/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:gif_view/gif_view.dart';
 
@@ -76,7 +77,8 @@ class _FirstScreenState extends State<FirstScreen> {
                     child: Align(
                       alignment: Alignment.topLeft,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {Navigator.push(context,MaterialPageRoute(builder: (context) =>home_screen()));
+},
                         style: ElevatedButton.styleFrom(
                           foregroundColor: Color.fromARGB(255, 250, 250, 250),
                           backgroundColor: Color.fromARGB(255, 247, 70, 70),

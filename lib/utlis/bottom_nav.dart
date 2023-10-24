@@ -45,6 +45,6 @@ class _bottom_navState extends State<bottom_nav> {
                   )
                 ]),
           ),
-        );;
+        );
   }
 }

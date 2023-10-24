@@ -1,4 +1,9 @@
+import 'package:e_commerce/model/apicalling.dart';
 import 'package:flutter/material.dart';
+
+
+
+
 
 class product_card extends StatefulWidget {
   const product_card({super.key});
@@ -8,9 +13,23 @@ class product_card extends StatefulWidget {
 }
 
 class _product_cardState extends State<product_card> {
+
+ 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return FutureBuilder(
+            future: getData(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return GridView.builder(
+                    itemCount: 8,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 8,
+                            mainAxisSpacing: 8),
+                    itemBuilder: (context, index) {
+                      return Stack(
       children: [
 
         // Image 
@@ -19,7 +38,7 @@ class _product_cardState extends State<product_card> {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
-                      'https://images.unsplash.com/photo-1682687219570-4c596363fd96?auto=format&fit=crop&q=80&w=2750&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'),
+                      productApi[index].image),
                   fit: BoxFit.cover)),
         ),
 
@@ -38,7 +57,7 @@ class _product_cardState extends State<product_card> {
         Align(
           alignment: Alignment.bottomCenter,
           child: Text(
-            "Goggle",
+            '${productApi[index].title}',maxLines: 1,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: const Color.fromARGB(255, 249, 248, 248),
@@ -47,5 +66,12 @@ class _product_cardState extends State<product_card> {
         ),
       ],
     );
+                    });
+              } else {
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+            });
   }
 }

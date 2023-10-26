@@ -12,5 +12,5 @@ What I've learned through this project:
 <h1>APP</h1>
 
 <video width="320" height="240" controls>
-  <source src="Screen Recording 2023-10-27 at 12.14.14 AM.mov" type="video/mov">
+  <source src="Screen Recording 2023-10-27 at 12.14.14 AM.mov">
 </video>

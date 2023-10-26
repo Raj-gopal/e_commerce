@@ -1,16 +1,14 @@
 # e_commerce
 
-A new Flutter project.
+This project is more than just writing lines of code; it's my personal adventure in gaining knowledge and improving my skills. Building this Flutter E-commerce app with API integration is a result of my deep interest in technology and my aspiration to excel in this field.
 
-## Getting Started
+Technology Stack:
+· Flutter
 
-This project is a starting point for a Flutter application.
+What I've learned through this project:
+· I've become quite skilled at making the app's front end look great and work smoothly.
+· I've figured out how to connect the app with an API.
 
-A few resources to get you started if this is your first Flutter project:
+<h1>APP</h1>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

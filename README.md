@@ -10,7 +10,5 @@ What I've learned through this project:
 · I've figured out how to connect the app with an API.
 
 <h1>APP</h1>
-
-<video>
-  <source src="Screen Recording 2023-10-27 at 12.14.14 AM.mov">
-</video>
+  
+https://github.com/Raj-gopal/e_commerce/assets/121439941/4344846e-e5a4-4bd8-b226-886107f1cdf9

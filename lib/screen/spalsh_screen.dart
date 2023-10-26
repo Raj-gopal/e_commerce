@@ -1,3 +1,5 @@
+import 'package:e_commerce/screen/home_page.dart';
+import 'package:e_commerce/utlis/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:gif_view/gif_view.dart';
 
@@ -58,7 +60,8 @@ class _FirstScreenState extends State<FirstScreen> {
                           child: SizedBox(height: 16),
                         ),
                         TextSpan(
-                          text: '\nWe will deliver your favorite food in 30 minutes',
+                          text:
+                              '\nWe will deliver your favorite food in 30 minutes',
                           style: TextStyle(
                             color: Color.fromARGB(255, 92, 92, 92),
                             fontSize: 20,
@@ -76,21 +79,28 @@ class _FirstScreenState extends State<FirstScreen> {
                     child: Align(
                       alignment: Alignment.topLeft,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => home_screen()));
+                        },
                         style: ElevatedButton.styleFrom(
                           foregroundColor: Color.fromARGB(255, 250, 250, 250),
                           backgroundColor: Color.fromARGB(255, 247, 70, 70),
                           elevation: 8.0,
-                          textStyle: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),
+                          textStyle: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w500),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(24),
                           ),
-                          minimumSize: Size(double.infinity, 50), // Set the height here
+                          minimumSize:
+                              Size(double.infinity, 50), 
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
-                           // Maximize width
+                          // Maximize width
                           children: [
                             Text('Next'),
                           ],
@@ -107,4 +117,3 @@ class _FirstScreenState extends State<FirstScreen> {
     );
   }
 }
-

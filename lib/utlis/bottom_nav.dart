@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/instance_manager.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 
 class bottom_nav extends StatefulWidget {
   const bottom_nav({super.key});
@@ -32,7 +34,7 @@ class _bottom_navState extends State<bottom_nav> {
           },
           tabs: const [
             GButton(
-              icon: Icons.home,
+            icon: Icons.home,
               text: 'Home',
             ),
             GButton(

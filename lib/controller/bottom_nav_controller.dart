@@ -1,3 +1,4 @@
+import 'package:e_commerce/screen/cart_screen.dart';
 import 'package:e_commerce/screen/home_page.dart';
 import 'package:e_commerce/screen/profile.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class BottomNavigationBarController extends GetxController{
  var pages = [
 
   home_screen(),
-  Text('Profile'),
+  cart_screen(),
   profile_screen(),
 
  ];

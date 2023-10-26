@@ -1,10 +1,8 @@
 import 'package:e_commerce/utlis/product_card.dart';
 import 'package:flutter/material.dart';
-import 'package:e_commerce/utlis/bottom_nav.dart';
 
+import '../utlis/bottom_nav.dart';
 
-
- 
 
 class home_screen extends StatefulWidget {
   const home_screen({super.key});
@@ -19,19 +17,24 @@ class _home_screenState extends State<home_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
 
         //App Bar
         appBar: AppBar(
-          title: Text('Home'),
+          title: const  Text('Product'),
         ),
+ 
+         //Body
+        body: product_card(),
 
         //Bottom Navigation Bar
-        bottomNavigationBar: bottom_nav(),
+      // bottomNavigationBar: const bottom_nav(),
 
-        //Body
-        body: product_card(),
-        
+       
         );
+        
+        
+        
   }
 
 }
